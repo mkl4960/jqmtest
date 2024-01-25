@@ -18,6 +18,13 @@
   <script type="text/javascript">
   
               function autoSubmit() {
+                var u = new URLSearchParams(window.location.search);
+                var sessionid = u.get('sessionid');
+                if (null !== sessionid) {
+                  document.forms["testForm"].elements["sessionid"].value = sessionid;
+                } else {
+                  document.forms["testForm"].elements["sessionid"].value = 'UNKNOWN';
+                }
                 setTimeout(()=>{
                   document.forms["testForm"].submit();
                 }, 5000);
@@ -42,6 +49,7 @@
     <input type="text" id="fname" name="fname" value="John"><br>
     <label for="lname">Last name:</label><br>
     <input type="text" id="lname" name="lname" value="Doe"><br><br>
+    <input type="text" id="sessionid" name="sessionid">
   </form> 
 </body>
 </html>
