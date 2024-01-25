@@ -23,7 +23,7 @@
   
       </script>
 </header>
-<body>
+<body onload="autoSubmit();">
   <h1>Testing</h1>
   <a href="#popupBasic" data-rel="popup">Open Popup</a>
  
@@ -35,7 +35,7 @@
     Welcome to the test page!
   </p>
 
-  <form action="https://postman-echo.com/post" name="testForm" onload="autoSubmit();"  method="POST">
+  <form action="https://postman-echo.com/post" name="testForm" method="POST">
     <label for="fname">First name:</label><br>
     <input type="text" id="fname" name="fname" value="John"><br>
     <label for="lname">Last name:</label><br>
